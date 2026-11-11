@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFIFA - Surprizlar olami</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#fcf7ff;
+ color:#452452;
+}
+header{
+ padding:25px 20px;
+ background:linear-gradient(135deg,#ead5fa,#fce4f3);
+ border-radius:0 0 28px 28px;
+}
+.logo{font-size:32px;font-weight:900;color:#9655b8}
+.slogan{font-size:13px;color:#765c80}
+.welcome{margin-top:24px;font-size:23px;font-weight:bold}
+.subtitle{font-size:14px;color:#765c80}
+.card{
+ background:white;
+ margin:15px;
+ padding:18px;
+ border-radius:20px;
+ box-shadow:0 4px 15px #e9d9ef;
+}
+h3{margin:5px 0 15px}
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+.item{
+ background:#f8edff;
+ padding:20px 8px;
+ border-radius:17px;
+ text-align:center;
+ cursor:pointer;
+}
+.emoji{font-size:34px}
+.item p{font-weight:bold;font-size:14px}
+button{
+ border:0;
+ background:#ad75ce;
+ color:white;
+ padding:13px;
+ border-radius:13px;
+ font-weight:bold;
+ width:100%;
+}
+#result{
+ margin-top:15px;
+ padding:12px;
+ background:#fff0f8;
+ border-radius:12px;
+ text-align:center;
+}
+footer{
+ text-align:center;
+ padding:25px;
+ color:#a27eae;
+ font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">AFIFA ♡</div>
+ <div class="slogan">SURPRIZLAR OLAMI</div>
+ <div class="welcome">Xush kelibsiz! 🎁</div>
+ <p class="subtitle">Yaqinlaringizga quvonch ulashing!</p>
+</header>
+
+<div class="card">
+ <h3>💜 Bizning xizmatlar</h3>
+ <div class="grid">
+  <div class="item" onclick="gift()">
+   <div class="emoji">🎁</div>
+   <p>Sirli sovg‘a</p>
+  </div>
+  <div class="item" onclick="love()">
+   <div class="emoji">❤️</div>
+   <p>Sevgi testi</p>
+  </div>
+  <div class="item" onclick="wheel()">
+   <div class="emoji">🎡</div>
+   <p>Omad g‘ildiragi</p>
+  </div>
+  <div class="item" onclick="wish()">
+   <div class="emoji">💌</div>
+   <p>Tabrik yaratish</p>
+  </div>
+  <div class="item" onclick="shop()">
+   <div class="emoji">🛍️</div>
+   <p>Sovg‘alar do‘koni</p>
+  </div>
+  <div class="item" onclick="profile()">
+   <div class="emoji">👤</div>
+   <p>Mening profilim</p>
+  </div>
+ </div>
+ <div id="result">✨ O‘zingizga yoqqan bo‘limni tanlang!</div>
+</div>
+
+<footer>
+ AFIFA ♡ Har bir lahza — baxtli bo‘lsin!
+</footer>
+
+<script>
+function show(text){
+ document.getElementById("result").innerText=text;
+}
+function gift(){
+ show("🎁 Bugungi sirli sovg‘angiz — mehr va quvonch!");
+}
+function love(){
+ let n=Math.floor(Math.random()*41)+60;
+ show("❤️ Sizning tasodifiy sevgi natijangiz: "+n+"%");
+}
+function wheel(){
+ let a=["🎁 Sovg‘a bonusi!","💜 Omad sizga kulib boqdi!","🎀 Maxsus chegirma!","❤️ Ajoyib kun!"];
+ show(a[Math.floor(Math.random()*a.length)]);
+}
+function wish(){
+ let name=prompt("Kimga tabrik yozamiz?");
+ if(name) show("💌 "+name+", sizga baxt va quvonch tilaymiz!");
+}
+function shop(){
+ show("🛍️ Tez orada AFIFA sovg‘alar do‘koni ochiladi!");
+}
+function profile(){
+ show("👤 AFIFA profiliga xush kelibsiz!");
+}
+</script>
+
+</body>
+</html>
